@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee & Cars | Curiosidades e Cultura Automotiva</title>
-    <link rel="icon" href="img/logo.png">
+    <link rel="icon" href="img/logo.png" />
     <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
@@ -167,14 +167,14 @@
 
       <!-- Seção de Destaques (exemplo adicional) -->
       <section class="py-16 bg-gray-900">
-        <div class="container mx-auto px-4">
+        <div class="destaques container mx-auto px-4">
           <h2 class="text-3xl font-bold text-center text-white mb-12">
             Destaques
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card 1 -->
             <div
-              class="classic bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+              class="card-classic classic bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
             >
               <img
                 src="img/classico4.jpg"
@@ -198,7 +198,7 @@
 
             <!-- Card 2 -->
             <div
-              class="street bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+              class="card-street street bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
             >
               <img
                 src="img/evento2.jpg"
@@ -222,7 +222,7 @@
 
             <!-- Card 3 -->
             <div
-              class="review bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+              class="card-review review bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
             >
               <img
                 src="img/review.jpg"
@@ -246,7 +246,7 @@
 
             <!-- Card 4 -->
             <div
-              class="hypercars bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+              class="card-hypercars hypercars bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
             >
               <img
                 src="img/Mclaren Senna GTR Marlboro Livery.jpg"
@@ -271,7 +271,7 @@
 
             <!-- Card 5 -->
             <div
-              class="records bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+              class="card-records records bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
             >
               <img
                 src="img/Thrust SSC.jpg"
@@ -296,7 +296,7 @@
 
             <!-- Card 6 -->
             <div
-              class="success bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+              class="card-success success bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
             >
               <img
                 src="img/1965 Lamborghini 350 GT Coupe.jpg"
@@ -1072,6 +1072,44 @@
             }
           });
         }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Verifica se é um dispositivo touch
+        const isTouchDevice =
+          "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+        if (isTouchDevice) {
+          const cards = document.querySelectorAll(".destaques .bg-gray-800");
+
+          // Configura o Intersection Observer para dispositivos touch
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                const img = entry.target.querySelector("img");
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("card-active");
+                  img.style.filter = "saturate(1)";
+                } else {
+                  entry.target.classList.remove("card-active");
+                  img.style.filter = "saturate(0)";
+                }
+              });
+            },
+            {
+              threshold: 0.5,
+              rootMargin: "0px 0px -100px 0px",
+            }
+          );
+
+          // Observa cada card
+          cards.forEach((card) => {
+            observer.observe(card);
+          });
+        }
+        // Dispositivos não-touch mantêm o hover normal via CSS
       });
     </script>
   </body>
