@@ -1,0 +1,173 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,900;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-fadeUpIn {
+    animation: fadeUpIn 0.5s ease-out forwards;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.text-first-section {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.review img {
+    filter: saturate(0);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.review:hover img {
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+.classic img {
+    filter: saturate(0);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.classic:hover img {
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+.street img {
+    filter: saturate(0);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.street:hover img {
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+.hypercars img {
+    filter: saturate(0);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.hypercars:hover img {
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+.records img {
+    filter: saturate(0);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.records:hover img {
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+.success img {
+    filter: saturate(0);
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.success:hover img {
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+
+/* Estilos para a seção classic-one */
+.classic-one {
+    position: relative;
+    z-index: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+}
+.news-one {
+    position: relative;
+    z-index: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+#classic-car-image {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Efeito de zoom suave no hover */
+.group:hover #classic-car-image {
+    transform: scale(1.05);
+}
+
+/* Sombra mais pronunciada */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Transição suave para os cards */
+.bg-gray-800\/50 {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+/* Garante que a imagem não ultrapasse os limites */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Melhora a performance das transformações */
+#classic-car-image,
+.classic-one ul li,
+.classic-one .bg-gray-800\/50 {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+/* Efeito de hover nos links */
+footer a {
+    transition: all 0.3s ease;
+}
+
+/* Animação de entrada com GSAP */
+footer {
+    z-index: 10;
+    /* Garante que fique acima de outros elementos */
+}
+
+/* Estilo para os ícones sociais */
+footer .social-icons a {
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Adicione ao seu arquivo CSS para melhorar o gradiente */
+.bg-gradient-to-r.from-transparent.via-amber-400.to-transparent {
+    background-image: linear-gradient(90deg, transparent 0%, #f59e0b 50%, transparent 100%);
+}

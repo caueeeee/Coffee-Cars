@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee & Cars | Curiosidades e Cultura Automotiva</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Explore o mundo dos carros com curiosidades, fotos e histórias automotivas."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+      .text-card {
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .first-section {
+        background-image: url(img/bg3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: calc(100vh - 80px); /* Ajuste para altura do header */
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <!-- Header Fixo -->
+    <header
+      class="w-full bg-[#000014] text-white h-[80px] flex items-center fixed top-0 z-50"
+    >
+      <nav
+        class="flex justify-between items-center p-[10px] max-w-7xl mx-auto w-full"
+      >
+        <!-- Logo/Título -->
+        <h1 class="text-xl font-bold flex items-center h-full">
+          What About a Coffee?
+        </h1>
+
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex gap-6 items-center h-full">
+          <li>
+            <a
+              href="curiosidades.html"
+              class="hover:text-amber-400 transition flex items-center h-full py-2"
+              >Curiosidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="reviews.html"
+              class="hover:text-amber-400 transition flex items-center h-full py-2"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog.html"
+              class="hover:text-amber-400 transition flex items-center h-full py-2"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="eventos.html"
+              class="hover:text-amber-400 transition flex items-center h-full py-2"
+              >Eventos</a
+            >
+          </li>
+          <li>
+            <a
+              href="sobre.html"
+              class="hover:text-amber-400 transition flex items-center h-full py-2"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="contato.html"
+              class="hover:text-amber-400 transition flex items-center h-full py-2"
+              >Contato</a
+            >
+          </li>
+        </ul>
+
+        <!-- Botão Mobile -->
+        <button class="md:hidden text-2xl" id="menu-toggle">☰</button>
+      </nav>
+    </header>
+    <div
+      id="mobile-menu"
+      class="md:hidden fixed top-[80px] left-0 w-full bg-[#000014] h-0 overflow-hidden transition-all duration-300 z-40"
+    >
+      <ul class="flex flex-col items-center gap-4 py-4">
+        <li>
+          <a href="curiosidades.html" class="text-white hover:text-amber-400"
+            >Curiosidades</a
+          >
+        </li>
+        <li>
+          <a href="reviews.html" class="text-white hover:text-amber-400"
+            >Reviews</a
+          >
+        </li>
+        <li>
+          <a href="blog.html" class="text-white hover:text-amber-400">Blog</a>
+        </li>
+        <li>
+          <a href="eventos.html" class="text-white hover:text-amber-400"
+            >Eventos</a
+          >
+        </li>
+        <li>
+          <a href="sobre.html" class="text-white hover:text-amber-400">Sobre</a>
+        </li>
+        <li>
+          <a href="contato.html" class="text-white hover:text-amber-400"
+            >Contato</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="pt-[80px]">
+      <!-- Espaço para o header fixo -->
+      <!-- Seção Hero -->
+      <section
+        class="first-section flex items-center justify-center px-4 py-16"
+      >
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
+            <div
+              class="animate-fadeUpIn text-card bg-black/65 text-white p-6 rounded-lg text-lg md:text-xl"
+            >
+              <h2 class="text-2xl md:text-3xl font-bold mb-4 text-amber-400">
+                Bem-vindo ao Coffee & Cars
+              </h2>
+              <p>
+                O melhor site direcionado a carros e curiosidades automotivas!
+                Aqui você encontrará tudo sobre o mundo dos carros, desde
+                curiosidades até histórias incríveis contadas por amantes de
+                carros. Se você é um desses, esse é o lugar certo para você!
+              </p>
+            </div>
+            <div
+              class="text-card animate-fadeUpIn bg-black/65 text-white p-6 rounded-lg text-lg md:text-xl"
+            >
+              <h2 class="text-2xl md:text-3xl font-bold mb-4 text-amber-400">
+                Junte-se à comunidade
+              </h2>
+              <p>
+                Compartilhe histórias, publique fotos e faça parte de uma
+                comunidade apaixonada por carros. Descubra coisas incríveis,
+                aprenda, ensine, tudo isso enquanto toma um café no conforto da
+                sua casa ou onde quer que esteja! E aí, vamos embarcar nessa
+                jornada juntos?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Destaques (exemplo adicional) -->
+      <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-white mb-12">
+            Destaques
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="classic bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="img/classico4.jpg"
+                alt="Carro clássico"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Carros Clássicos
+                </h3>
+                <p class="text-gray-300">
+                  Conheça a história por trás dos modelos mais icônicos.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                  >Saiba mais →</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="street bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="img/evento2.jpg"
+                alt="Evento automotivo"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Próximos Eventos
+                </h3>
+                <p class="text-gray-300">
+                  Não perca os principais encontros de entusiastas.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                  >Saiba mais →</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="review bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="img/review.jpg"
+                alt="Review de carro"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Reviews Exclusivos
+                </h3>
+                <p class="text-gray-300">
+                  Análises detalhadas dos lançamentos mais aguardados.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                  >Saiba mais →</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="hypercars bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="img/Mclaren Senna GTR Marlboro Livery.jpg"
+                alt="Review de carro"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Hiperesportivos
+                </h3>
+                <p class="text-gray-300">
+                  Descubra e se aventure por carros que parecem de outro plano
+                  de tão absurdos e potentes que são.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                  >Saiba mais →</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              class="records bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="img/Thrust SSC.jpg"
+                alt="Review de carro"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Guiness World Records Cars
+                </h3>
+                <p class="text-gray-300">
+                  Se surpreenda com carros que têm quebraram limites e têm seus
+                  records registrados no Guiness Book, livro dos records.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                  >Saiba mais →</a
+                >
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+              class="success bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300"
+            >
+              <img
+                src="img/1965 Lamborghini 350 GT Coupe.jpg"
+                alt="Review de carro"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Por trás do sucesso
+                </h3>
+                <p class="text-gray-300">
+                  Saiba mais sobre a história de marcas que revolucionaram o
+                  mundo automotivo e mudaram a forma como vemos os carros. Desde
+                  sua criação até os dias atuais, conheça a trajetória de marcas
+                  como Ferrari, Lamborghini, Porsche e muito mais.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                  >Saiba mais →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adicione isso no seu HTML, substituindo a section existente ou ajustando conforme necessário -->
+      <!-- Substitua a section classic-one por esta versão corrigida -->
+      <section
+        class="classic-one py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-visible"
+      >
+        <div class="container mx-auto px-4 relative z-10">
+          <!-- Título -->
+          <h2
+            class="text-4xl md:text-5xl font-bold text-center text-white mb-16"
+          >
+            <span class="text-amber-400">Joias</span> sobre Rodas
+            <span class="block w-32 h-1 bg-amber-400 mx-auto mt-4"></span>
+          </h2>
+
+          <!-- Grid de Conteúdo -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Container da Imagem - Versão Corrigida -->
+            <div
+              class="h-96 lg:h-[500px] rounded-xl shadow-2xl overflow-hidden relative group"
+            >
+              <!-- Imagem principal -->
+              <img
+                src="img/Ferrari 250 GTO, 1962_.jpg"
+                alt="Ferrari 250 GTO"
+                class="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                id="classic-car-image"
+              />
+              <!-- Overlay e legenda -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6"
+              >
+                <span class="text-amber-400 font-mono text-sm"
+                  >Ferrari 250 GTO - A obra-prima dos anos 60</span
+                >
+              </div>
+            </div>
+
+            <!-- Texto -->
+            <div class="space-y-6 text-white">
+              <h3 class="text-3xl font-bold">
+                <span class="text-amber-400">Histórias</span> que Inspiram
+              </h3>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Cada curva, cada linha, cada motor tem uma história para contar.
+                No mundo dos carros clássicos, a mecânica se mistura com arte e
+                a engenharia com paixão. Descubra os bastidores dos modelos que
+                revolucionaram eras e continuam a fascinar gerações.
+              </p>
+
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-amber-400 mt-1 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300"
+                    >Restaurações que desafiam o tempo</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-amber-400 mt-1 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300"
+                    >Projetos de colecionadores apaixonados</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-amber-400 mt-1 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300"
+                    >Curiosidades que você não encontra em livros</span
+                  >
+                </li>
+              </ul>
+
+              <div class="pt-6">
+                <a
+                  href="#"
+                  class="inline-flex items-center px-6 py-3 border border-amber-400 text-amber-400 rounded-md hover:bg-amber-400 hover:text-black transition duration-300 group"
+                >
+                  Explorar Clássicos
+                  <svg
+                    class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards de curiosidades -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <!-- Card 1 -->
+            <div
+              class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-amber-400 transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="text-amber-400 text-4xl mb-4">01</div>
+              <h4 class="text-xl font-bold text-white mb-3">
+                Valorização Surpreendente
+              </h4>
+              <p class="text-gray-400">
+                Um Ferrari 250 GTO de 1962 foi vendido por US$ 48 milhões em
+                2018, tornando-se o carro mais caro já negociado.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-amber-400 transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="text-amber-400 text-4xl mb-4">02</div>
+              <h4 class="text-xl font-bold text-white mb-3">
+                Pecados Originais
+              </h4>
+              <p class="text-gray-400">
+                Colecionadores pagam até 30% mais por peças originais, mesmo que
+                réplicas sejam funcionalmente idênticas.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-amber-400 transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="text-amber-400 text-4xl mb-4">03</div>
+              <h4 class="text-xl font-bold text-white mb-3">
+                Tempo de Restauração
+              </h4>
+              <p class="text-gray-400">
+                Uma restauração completa de um clássico pode levar de 1.500 a
+                5.000 horas de trabalho artesanal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="news-one py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-visible"
+      >
+        <div class="container mx-auto px-4 relative z-10">
+          <!-- Título -->
+          <h2
+            class="text-4xl md:text-5xl font-bold text-center text-white mb-16"
+          >
+            <span class="text-amber-400">Nova</span> aposta da Ferrari
+            <span class="block w-32 h-1 bg-amber-400 mx-auto mt-4"></span>
+          </h2>
+
+          <!-- Grid de Conteúdo -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Container da Imagem - Versão Corrigida -->
+            <div
+              class="h-96 lg:h-[500px] rounded-xl shadow-2xl overflow-hidden relative group"
+            >
+              <!-- Imagem principal -->
+              <img
+                src="img/Ferrari.jpg"
+                alt="Ferrari 250 GTO"
+                class="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+                id="classic-car-image"
+              />
+              <!-- Overlay e legenda -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-6"
+              >
+                <span class="text-amber-400 font-mono text-sm"
+                  >Ferrari 12Cilindri - O mais novo lançamento da marca
+                  italiana</span
+                >
+              </div>
+            </div>
+
+            <!-- Texto -->
+            <div class="space-y-6 text-white">
+              <h3 class="text-3xl font-bold">
+                <span class="text-amber-400">A Última Ode</span> ao V12 Aspirado
+              </h3>
+              <p class="text-gray-300 text-lg leading-relaxed">
+                Cada rugido deste V12 é um tributo à mecânica pura, cada linha
+                do seu design uma carta de amor aos GT clássicos dos anos 60. A
+                12Cilindri não é apenas um carro – é a fusão entre a artesania
+                italiana e a obsessão por performance. Com seus 830 cavalos de
+                potência e um motor que desafia a era elétrica, esta Ferrari
+                conta a história de uma era que insiste em não acabar. Descubra
+                como a Maranello transformou metal, paixão e engenhosidade em um
+                ícone sobre rodas.
+              </p>
+
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-amber-400 mt-1 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300"
+                    >Restaurações que desafiam o tempo</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-amber-400 mt-1 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300"
+                    >Projetos de colecionadores apaixonados</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-amber-400 mt-1 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span class="text-gray-300"
+                    >Curiosidades que você não encontra em livros</span
+                  >
+                </li>
+              </ul>
+
+              <div class="pt-6">
+                <a
+                  href="#"
+                  class="inline-flex items-center px-6 py-3 border border-amber-400 text-amber-400 rounded-md hover:bg-amber-400 hover:text-black transition duration-300 group"
+                >
+                  Saiba mais!
+                  <svg
+                    class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards de curiosidades -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <!-- Card 1 -->
+            <div
+              class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-amber-400"
+            >
+              <img
+                src="img/motor-12cilindri.jpg"
+                alt="Motor V12 da Ferrari 12Cilindri"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  O Último V12 Aspirado
+                </h3>
+                <p class="text-gray-300">
+                  Detalhes do motor 6.5L que produz 830 cv - uma relíquia
+                  mecânica em tempos elétricos.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                >
+                  Explore o coração da besta →
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-amber-400"
+            >
+              <img
+                src="img/design-12cilindri.jpg"
+                alt="Design da Ferrari 12Cilindri"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Linhas Que Reverenciam o Passado
+                </h3>
+                <p class="text-gray-300">
+                  Como a Ferrari misturou DNA dos anos 60 com aerodinâmica do
+                  século XXI.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                >
+                  Decifre o design →
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-gray-700 hover:border-amber-400"
+            >
+              <img
+                src="img/21-Ferrari-Cilindri-review.jpg"
+                alt="Ferrari 12Cilindri em movimento"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Números Que Desafiam a Física
+                </h3>
+                <p class="text-gray-300">
+                  2.9s para 100 km/h e 340 km/h de velocidade máxima - como a
+                  engenharia italiana alcançou esses números.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block mt-4 text-amber-400 hover:text-amber-300"
+                >
+                  Mergulhe na performance →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#000014] text-white pt-16 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-4">
+        <!-- Grid do Rodapé -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <!-- Coluna 1 - Logo e Slogan -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold flex items-center">
+              <span class="text-amber-400">Coffee</span> & Cars
+            </h3>
+            <p class="text-gray-400">
+              A paixão por automóveis em cada detalhe, compartilhada com um bom
+              café.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-amber-400 transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna 2 - Links Rápidos -->
+          <div>
+            <h4 class="text-lg font-semibold mb-6 text-amber-400">
+              Links Rápidos
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Galeria</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Eventos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3 - Categorias -->
+          <div>
+            <h4 class="text-lg font-semibold mb-6 text-amber-400">
+              Categorias
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Clássicos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Hiperesportivos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Tuning</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Elétricos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Curiosidades</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Coluna 4 - Newsletter -->
+          <div>
+            <h4 class="text-lg font-semibold mb-6 text-amber-400">
+              Newsletter
+            </h4>
+            <p class="text-gray-400 mb-4">
+              Assine para receber novidades e conteúdos exclusivos
+            </p>
+            <form class="flex flex-col space-y-3">
+              <input
+                type="email"
+                placeholder="Seu melhor e-mail"
+                class="bg-gray-800 border border-gray-700 rounded px-4 py-2 text-white focus:border-amber-400 focus:outline-none transition"
+              />
+              <button
+                type="submit"
+                class="bg-amber-400 text-black font-medium py-2 px-4 rounded hover:bg-amber-500 transition"
+              >
+                Assinar
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Divisor -->
+        <div class="border-t border-gray-800 mt-12 mb-8"></div>
+
+        <!-- Rodapé Inferior -->
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 text-sm">
+            © 2023 Coffee & Cars. Todos os direitos reservados.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-300 text-sm transition"
+              >Termos de Serviço</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-300 text-sm transition"
+              >Política de Privacidade</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-300 text-sm transition"
+              >Cookies</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Configurações comuns para as animações
+        gsap.defaults({
+          ease: "power2.out",
+          duration: 1,
+        });
+
+        // Animação da seção classic-one
+        gsap.from(".classic-one #classic-car-image", {
+          scrollTrigger: {
+            trigger: ".classic-one",
+            start: "top 75%",
+            end: "top 30%",
+            scrub: false,
+            markers: false,
+          },
+          x: -100,
+          opacity: 0,
+        });
+
+        gsap.from(".news-one #classic-car-image", {
+          scrollTrigger: {
+            trigger: ".news-one",
+            start: "top 75%",
+            end: "top 30%",
+            scrub: false,
+            markers: false,
+          },
+          x: -100,
+          opacity: 0,
+        });
+
+        // Animação dos itens da lista
+        gsap.utils.toArray(".classic-one ul li").forEach((item, i) => {
+          gsap.from(item, {
+            scrollTrigger: {
+              trigger: ".classic-one ul",
+              start: "top 70%",
+              scrub: false,
+            },
+            y: 30,
+            opacity: 0,
+            delay: i * 0.2,
+          });
+        });
+
+        gsap.utils.toArray(".news-one ul li").forEach((item, i) => {
+          gsap.from(item, {
+            scrollTrigger: {
+              trigger: ".news-one ul",
+              start: "top 70%",
+              scrub: false,
+            },
+            y: 30,
+            opacity: 0,
+            delay: i * 0.2,
+          });
+        });
+
+        // Animação do botão
+        gsap.from(".classic-one .pt-6 a", {
+          scrollTrigger: {
+            trigger: ".classic-one .pt-6",
+            start: "top 80%",
+          },
+          scale: 0.8,
+          opacity: 0,
+        });
+
+        gsap.from(".news-one .pt-6 a", {
+          scrollTrigger: {
+            trigger: ".news-one .pt-6",
+            start: "top 80%",
+          },
+          scale: 0.8,
+          opacity: 0,
+        });
+
+        // Animação dos cards de curiosidade (MODIFICADA)
+        // Animação dos cards de curiosidade (Versão corrigida e testada)
+        // Versão corrigida com trigger alternativo
+        gsap.utils
+          .toArray(".classic-one .bg-gray-800\\/50")
+          .forEach((card, i) => {
+            gsap.from(card, {
+              scrollTrigger: {
+                trigger: ".classic-one", // Dispara quando a SEÇÃO DOS CLÁSSICOS entra na tela
+                start: "top 70%",
+                toggleActions: "play none none none",
+                markers: false, // Ative como true para debug se necessário
+              },
+              y: 100,
+              opacity: 0,
+              duration: 1.5,
+              delay: i * 0.3,
+              ease: "power3.out",
+            });
+          });
+
+        gsap.utils.toArray(".news-one .bg-gray-800").forEach((card, i) => {
+          gsap.from(card, {
+            scrollTrigger: {
+              trigger: ".news-one", // Dispara quando a SEÇÃO DA FERRARI entra na tela
+              start: "top 70%",
+              toggleActions: "play none none none",
+              markers: false,
+            },
+            y: 100,
+            opacity: 0,
+            duration: 1.5,
+            delay: i * 0.3,
+            ease: "power3.out",
+          });
+        });
+
+        // Animação do footer (MODIFICADA)
+        gsap.from("footer", {
+          scrollTrigger: {
+            trigger: "footer",
+            start: "top bottom",
+            toggleActions: "play none none none",
+          },
+          y: 50,
+          opacity: 0,
+        });
+
+        // Animação das colunas do footer
+        gsap.utils
+          .toArray("footer .grid-cols-1 > div, footer .grid-cols-4 > div")
+          .forEach((col, i) => {
+            gsap.from(col, {
+              scrollTrigger: {
+                trigger: "footer",
+                start: "top 90%",
+              },
+              y: 30,
+              opacity: 0,
+              delay: i * 0.1,
+            });
+          });
+
+        // Menu Mobile (mantenha este código)
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            const isOpen = mobileMenu.style.height !== "0px";
+            mobileMenu.style.height = isOpen ? "0" : "100vh";
+            menuToggle.textContent = isOpen ? "☰" : "✕";
+          });
+
+          window.addEventListener("resize", function () {
+            if (window.innerWidth >= 768) {
+              mobileMenu.style.height = "0";
+              menuToggle.textContent = "☰";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
